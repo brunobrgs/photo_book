@@ -1,4 +1,5 @@
 ActiveAdmin.register Photo do
+  permit_params :image_file_name, :image_file_size, :image_file_type
 
   
   # See permitted parameters documentation:
