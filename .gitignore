@@ -7,6 +7,8 @@
 /.idea
 /db/schema.rb
 /config/database.yml
+/config/secrets.yml
+/public/assets
 
 # Ignore bundler config.
 /.bundle
