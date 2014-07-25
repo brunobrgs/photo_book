@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>PhotoBook</title>
+  <title><%= Settings.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Bruno Borges">
 
@@ -17,13 +17,23 @@
 <body>
   <div class="masthead clearfix">
     <div class="container">
-      <div class="logo pull-left">Photographer</div>
+      <div class="logo pull-left"><%= Settings.logo %></div>
       <div class="socials pull-right">
-        <a href=""><i class="icon-twitter"></i></a> <!-- your twitter link -->
-        <a href=""><i class="icon-facebook"></i></a> <!-- your facebook link -->
-        <a href=""><i class="icon-linkedin"></i></a> <!-- your linkedin link -->
-        <a href=""><i class="icon-pinterest"></i></a> <!-- your pinterest link -->
-        <a href=""><i class="icon-envelope"></i></a> <!-- your email address -->
+        <% if Settings.twitter %>
+          <a href="<%= Settings.twitter %>"><i class="icon-twitter"></i></a>
+        <% end %>
+        <% if Settings.facebook %>
+          <a href="<%= Settings.facebook %>" target="_blank"><i class="icon-facebook"></i></a>
+        <% end %>
+        <% if Settings.linkedin %>
+          <a href="<%= Settings.linkedin %>"><i class="icon-linkedin"></i></a>
+        <% end %>
+        <% if Settings.pinterest %>
+          <a href="<%= Settings.pinterest %>"><i class="icon-pinterest"></i></a>
+        <% end %>
+        <% if Settings.email %>
+          <a href="<%= Settings.email %>"><i class="icon-envelope"></i></a>
+        <% end %>
       </div>
     </div>
   </div>

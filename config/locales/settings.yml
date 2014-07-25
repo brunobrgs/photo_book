@@ -1,0 +1,21 @@
+pt-BR:
+  activerecord:
+    models:
+      settings:
+        one: "Configuração"
+        other: "Configurações"
+
+    attributes:
+      settings:
+        var: "Nome"
+        to_s: "Nome"
+        value: "Valor"
+
+  settings:
+    logo: 'Logo'
+    title: 'Título'
+    twitter: 'Twitter'
+    facebook: 'Facebook'
+    linkedin: 'Linkedin'
+    pinterest: 'Pinterest'
+    email: 'Email'
