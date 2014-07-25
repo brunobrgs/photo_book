@@ -6,6 +6,7 @@
 
 /.idea
 /db/schema.rb
+/config/database.yml
 
 # Ignore bundler config.
 /.bundle
