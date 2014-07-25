@@ -91,6 +91,11 @@ GEM
     coffee-script-source (1.7.1)
     daemons (1.1.9)
     debug_inspector (0.0.2)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+    dotenv-rails (0.11.1)
+      dotenv (= 0.11.1)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.1)
@@ -236,6 +241,7 @@ DEPENDENCIES
   bootstrap-sass-extras
   bundler
   devise!
+  dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails
   mysql2

@@ -26,6 +26,7 @@ gem 'validates_formatting_of'
 
 gem 'paperclip', '4.2.0'
 gem 'rails-settings-cached', '0.4.1'
+gem 'dotenv-rails', group: :development
 
 group :development do
   gem 'better_errors'

@@ -9,6 +9,7 @@
 /config/database.yml
 /config/secrets.yml
 /public/assets
+/.env
 
 # Ignore bundler config.
 /.bundle
