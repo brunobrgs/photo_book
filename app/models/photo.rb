@@ -3,7 +3,11 @@ class Photo < ActiveRecord::Base
 
   belongs_to :event
 
+  has_one :category, through: :event
+
+  delegate :link, to: :category, allow_nil: true
+
   validates_attachment_content_type :image,
     content_type: %w(image/jpg image/jpeg image/png)
-  validates :name, presence: true
+  validates :image, presence: true
 end

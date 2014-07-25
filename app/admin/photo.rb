@@ -1,5 +1,6 @@
 ActiveAdmin.register Photo do
-  permit_params :image_file_name, :image_file_size, :image_content_type, :image
+  permit_params :image_file_name, :image_file_size, :image_content_type, :image,
+    :event_id
 
   form do |f|
     f.inputs 'Foto' do

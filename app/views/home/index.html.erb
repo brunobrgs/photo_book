@@ -1,2 +1,19 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="clearfix">
+  <ul class="filter-nav">
+    <li class="active"><a data-id="all" href="">Principal</a></li>
+    <% Category.all.each do |category| %>
+      <li><a data-id="<%= category.link %>" href=""><%= category.name %></a></li>
+    <% end %>
+  </ul>
+</div>
+
+<ul class="thumbnails" id="thumbnails">
+  <% Photo.all.each do |photo| %>
+    <li class="span3" data-id="<%= photo.id %>" data-type="<%= photo.link %>">
+      <a href="<%= photo.image.url %>" class="thumbnail">
+        <img src="<%= photo.image.url %>" alt="" />
+        <span class="caption"><i class="icon-plus-sign"></i></span>
+      </a>
+    </li>
+  <% end %>
+</ul>
