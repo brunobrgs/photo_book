@@ -2,7 +2,7 @@ ActiveAdmin.register Photo do
   permit_params :image_file_name, :image_file_size, :image_content_type, :image
 
   form do |f|
-    f.inputs 'Project Details' do
+    f.inputs 'Foto' do
       f.input :event
       f.input :image, as: :file
       # Will preview the image when the object is edited

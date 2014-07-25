@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      photo:
+        one: "Foto"
+        other: "Fotos"
+
+    attributes:
+      photo:
+        event: "Evento"
+        image: "Imagem"

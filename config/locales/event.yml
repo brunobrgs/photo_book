@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      event:
+        one: "Evento"
+        other: "Eventos"
+
+    attributes:
+      event:
+        category: "Categoria"
+        description: "Descrição"
+        date: "Data"
+        name: "Nome"
