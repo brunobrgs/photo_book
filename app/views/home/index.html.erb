@@ -1,6 +1,6 @@
 <div class="clearfix">
   <ul class="filter-nav">
-    <li class="active"><a data-id="all" href="">Principal</a></li>
+    <li class="active"><a data-id="all" href="">Todas</a></li>
     <% Category.all.each do |category| %>
       <li><a data-id="<%= category.link %>" href=""><%= category.name %></a></li>
     <% end %>
@@ -8,10 +8,10 @@
 </div>
 
 <ul class="thumbnails" id="thumbnails">
-  <% Photo.all.each do |photo| %>
-    <li class="span3" data-id="<%= photo.id %>" data-type="<%= photo.link %>">
-      <a href="<%= photo.image.url %>" class="thumbnail">
-        <img src="<%= photo.image.url %>" alt="" />
+  <% Photo.all.shuffle.each do |photo| %>
+    <li class="span2" data-id="<%= photo.id %>" data-type="<%= photo.link %>">
+      <a href="<%= photo.image.url(:original) %>" class="thumbnail">
+        <img src="<%= photo.image.url(:thumb) %>" alt="" />
         <span class="caption"><i class="icon-plus-sign"></i></span>
       </a>
     </li>
