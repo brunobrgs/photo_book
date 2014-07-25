@@ -14,7 +14,7 @@ $(document).ready(function() {
   var $data = $thumbnails.clone();
 
   // attempt to call Quicksand on every click
-  $('.filter-nav li a').live('click', function(e) {
+  $('.filter-nav li a').on('click', function(e) {
 
     var thisid = $(this).attr('data-id');
 
