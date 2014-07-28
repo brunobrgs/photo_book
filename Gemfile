@@ -26,6 +26,8 @@ gem 'validates_formatting_of'
 
 gem 'paperclip', '4.2.0'
 gem 'rails-settings-cached', '0.4.1'
+gem 'mail_form', '1.5.0'
+gem 'simple_form', '3.0.2'
 gem 'dotenv-rails', group: :development
 
 group :development do

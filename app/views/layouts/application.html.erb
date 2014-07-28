@@ -17,7 +17,7 @@
 <body>
   <div class="masthead clearfix">
     <div class="container">
-      <div class="logo pull-left"><%= Settings.logo %></div>
+      <div class="logo pull-left"><%= link_to Settings.logo, root_path %></div>
       <div class="socials pull-right">
         <% if Settings.twitter %>
           <a href="<%= Settings.twitter %>"><i class="icon-twitter"></i></a>
@@ -32,15 +32,14 @@
           <a href="<%= Settings.pinterest %>"><i class="icon-pinterest"></i></a>
         <% end %>
         <% if Settings.email %>
-          <a href="mailto:<%= Settings.email %>"><i class="icon-envelope"></i></a>
+          <a href="<%= new_contact_path %>"><i class="icon-envelope"></i></a>
         <% end %>
       </div>
     </div>
   </div>
 
-  <%#= bootstrap_flash %>
-
   <div class="container">
+    <%= bootstrap_flash %>
     <%= yield %>
   </div>
 

@@ -1,0 +1,10 @@
+pt-BR:
+  mail_form:
+    models:
+      contact_form: "Contato do site"
+    attributes:
+      contact_form:
+        email: "E-mail"
+        message: "Mensagem"
+        name: "Nome"
+        subject: "Assunto"
