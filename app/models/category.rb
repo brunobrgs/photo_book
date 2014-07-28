@@ -6,6 +6,6 @@ class Category < ActiveRecord::Base
   default_scope { order(:name) }
 
   def link
-    name.downcase
+    name.downcase.split.join('_')
   end
 end
