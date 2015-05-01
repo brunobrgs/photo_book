@@ -1,5 +1,5 @@
 <div class="clearfix">
-  <ul class="filter-nav">
+  <ul class="filter-nav hide">
     <li class="active"><a data-id="all" href="">Todas</a></li>
     <% Category.all.each do |category| %>
       <li><a data-id="<%= category.link %>" href=""><%= category.name %></a></li>

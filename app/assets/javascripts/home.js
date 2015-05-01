@@ -9,6 +9,7 @@
         load_resources();
       } else {
         load_resources();
+        $('.filter-nav').slideDown();
       }
     }
   });
