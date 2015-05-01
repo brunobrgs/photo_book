@@ -10,6 +10,6 @@ class HomeController < ApplicationController
   protected
 
   def load
-    @photos = Photo.paginate(per_page: 4, page: params[:page])
+    @photos = Photo.page(params[:page]).per(4)
   end
 end
