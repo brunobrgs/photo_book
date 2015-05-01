@@ -13,8 +13,41 @@
 //= require jquery
 //= require jquery_ujs
 //= require base/shadowbox
-//= require base/jquery.quicksand
-//= require base/jquery.easing
-//= require base/photographer
 
 //= require home
+
+function load_resources() {
+  Shadowbox.setup("a.thumbnail");
+
+  // get the first collection
+  var $thumbnails = $('#thumbnails');
+
+  // clone thumbnails to get a second collection
+  var $data = $thumbnails.clone();
+
+  // attempt to call Quicksand on every click
+  $('.filter-nav li a').on('click', function(e) {
+
+    var thisid = $(this).attr('data-id');
+
+    if (thisid == 'all') {
+      var $filteredData = $data.find('li');
+    } else {
+      var $filteredData = $data.find('li[data-type=' + thisid + ']');
+    }
+
+    // finally, call quicksand
+    $thumbnails.quicksand($filteredData, {
+      duration: 800,
+      easing: 'easeInOutQuad'
+    }, function() {
+      Shadowbox.setup("a.thumbnail");
+    });
+
+    $('.filter-nav li').removeClass('active');
+    $(this).parent().addClass('active');
+
+    return false;
+
+  });
+}

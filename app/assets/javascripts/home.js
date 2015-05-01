@@ -6,9 +6,9 @@
     complete: function() {
       if ($('.thumbnails').data('max') > page) {
         setTimeout(function(){ worker(page + 1) }, 2000);
-        Shadowbox.setup("a.thumbnail");
+        load_resources();
       } else {
-        Shadowbox.setup("a.thumbnail");
+        load_resources();
       }
     }
   });
