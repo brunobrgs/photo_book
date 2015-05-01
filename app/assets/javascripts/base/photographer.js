@@ -5,8 +5,6 @@ $(document).ready(function() {
     skipSetup: true
   });
 
-  Shadowbox.setup("a.thumbnail");
-
   // get the first collection
   var $thumbnails = $('#thumbnails');
 

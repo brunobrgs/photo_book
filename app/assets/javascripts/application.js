@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require base/shadowbox
+//= require base/jquery.quicksand
+//= require base/jquery.easing
+//= require base/photographer
 
-//= require_tree .
+//= require home

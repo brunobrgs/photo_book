@@ -5,10 +5,10 @@
     url: 'load_more?page=' + page,
     complete: function() {
       if ($('.thumbnails').data('max') > page) {
-        $.getScript( "/assets/photographer.js", function() {});
-        setTimeout(worker(page + 1), 5000);
+        setTimeout(function(){ worker(page + 1) }, 2000);
+        Shadowbox.setup("a.thumbnail");
       } else {
-        $.getScript( "/assets/photographer.js", function() {});
+        Shadowbox.setup("a.thumbnail");
       }
     }
   });
