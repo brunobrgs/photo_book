@@ -1,0 +1,6 @@
+<li class="span3" data-id="<%= photo.id %>" data-type="<%= photo.link %>">
+  <a href="<%= photo.image.url(:original) %>" class="thumbnail" rel="shadowbox[Thumbs];options={counterType:'skip',continuous:true}">
+    <img src="<%= photo.image.url(:thumb) %>" alt="" />
+    <span class="caption"><i class="icon-plus-sign"></i></span>
+  </a>
+</li>

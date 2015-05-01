@@ -7,13 +7,5 @@
   </ul>
 </div>
 
-<ul class="thumbnails" id="thumbnails">
-  <% Photo.all.shuffle.each do |photo| %>
-    <li class="span3" data-id="<%= photo.id %>" data-type="<%= photo.link %>">
-      <a href="<%= photo.image.url(:original) %>" class="thumbnail">
-        <img src="<%= photo.image.url(:thumb) %>" alt="" />
-        <span class="caption"><i class="icon-plus-sign"></i></span>
-      </a>
-    </li>
-  <% end %>
+<ul class="thumbnails" id="thumbnails" data-max="<%= @photos.total_pages %>">
 </ul>
